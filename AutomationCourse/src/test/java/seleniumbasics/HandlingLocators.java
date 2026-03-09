@@ -1,7 +1,6 @@
 package seleniumbasics;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.By.ByXPath;
 
 public class HandlingLocators extends Base
 {
@@ -19,6 +18,7 @@ public class HandlingLocators extends Base
 		driver.findElement(By.linkText("Radio Buttons Demo"));
 		
 		driver.findElement(By.partialLinkText("Radio"));
+		
 		
 		driver.findElement(By.cssSelector("input[id='single-input-field']"));
 		
