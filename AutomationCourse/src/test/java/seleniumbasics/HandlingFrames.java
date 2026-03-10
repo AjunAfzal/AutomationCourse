@@ -10,7 +10,7 @@ package seleniumbasics;
  	 
  	public void verifyFrames() 
  	{ 
- 		driver.navigate().to(" https://demoqa.com/frames"); 
+ 		driver.navigate().to("https://demoqa.com/frames"); 
  		List<WebElement>totalFrame=driver.findElements(By.tagName("iframe")); 
  		System.out.println(totalFrame.size()); 
  		 

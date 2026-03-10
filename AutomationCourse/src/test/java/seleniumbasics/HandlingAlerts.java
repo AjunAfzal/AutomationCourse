@@ -9,7 +9,7 @@
  	 
  	public void verifySimpleAlert() 
  	{ 
- 		driver.navigate().to(" https://demoqa.com/alerts"); 
+ 		driver.navigate().to("https://demoqa.com/alerts"); 
  		WebElement simpleAlert = driver.findElement(By.id("alertButton")); 
  		simpleAlert.click(); 
  		Alert al=driver.switchTo().alert(); 
@@ -18,7 +18,7 @@
       
  	public void verifyConfirmAlert() 
  	{ 
- 		driver.navigate().to(" https://demoqa.com/alerts"); 
+ 		driver.navigate().to("https://demoqa.com/alerts"); 
  		WebElement confirmAlert= driver.findElement(By.id("confirmButton")); 
  		confirmAlert.click(); 
  		Alert al=driver.switchTo().alert(); 
@@ -27,7 +27,7 @@
  	 
  	public void verifyPromptAlert() 
  	{ 
- 		driver.navigate().to(" https://demoqa.com/alerts"); 
+ 		driver.navigate().to("https://demoqa.com/alerts"); 
  		WebElement promptAlert= driver.findElement(By.id("promtButton")); 
  		promptAlert.click(); 
  		Alert al=driver.switchTo().alert(); 
