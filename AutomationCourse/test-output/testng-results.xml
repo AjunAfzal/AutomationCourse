@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-11T10:22:13 IST" name="Default suite" finished-at="2026-03-11T10:22:15 IST" duration-ms="1974">
+  <suite started-at="2026-03-12T10:09:32 IST" name="Default suite" finished-at="2026-03-12T10:09:37 IST" duration-ms="4436">
     <groups>
     </groups>
-    <test started-at="2026-03-11T10:22:13 IST" name="Default test" finished-at="2026-03-11T10:22:15 IST" duration-ms="1974">
+    <test started-at="2026-03-12T10:09:32 IST" name="Default test" finished-at="2026-03-12T10:09:37 IST" duration-ms="4436">
       <class name="testscript.LoginTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testscript.LoginTest@4f83df68]" started-at="2026-03-11T10:22:13 IST" name="browserLaunch" finished-at="2026-03-11T10:22:15 IST" duration-ms="1636" status="PASS">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testscript.LoginTest@313ac989]" started-at="2026-03-12T10:09:32 IST" name="browserLaunch" finished-at="2026-03-12T10:09:35 IST" duration-ms="2540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyUserLoginWithInvalidCredentials()[pri:0, instance:testscript.LoginTest@4f83df68]" started-at="2026-03-11T10:22:15 IST" name="verifyUserLoginWithInvalidCredentials" finished-at="2026-03-11T10:22:15 IST" duration-ms="311" status="PASS">
+        <test-method signature="verifyUserLoginWithInvalidCredentials()[pri:0, instance:testscript.LoginTest@313ac989]" started-at="2026-03-12T10:09:35 IST" name="verifyUserLoginWithInvalidCredentials" finished-at="2026-03-12T10:09:37 IST" duration-ms="1802" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyUserLoginWithInvalidCredentials -->
-        <test-method is-config="true" signature="closeAndQuit()[pri:0, instance:testscript.LoginTest@4f83df68]" started-at="2026-03-11T10:22:15 IST" name="closeAndQuit" finished-at="2026-03-11T10:22:15 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="closeAndQuit()[pri:0, instance:testscript.LoginTest@313ac989]" started-at="2026-03-12T10:09:37 IST" name="closeAndQuit" finished-at="2026-03-12T10:09:37 IST" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAndQuit -->
