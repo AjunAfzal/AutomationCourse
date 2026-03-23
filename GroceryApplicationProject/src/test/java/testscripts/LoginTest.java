@@ -33,7 +33,7 @@ public class LoginTest extends TestNGBase
 	}
 	
 	@Test (priority = 3)
-	public void verifyUserLoginWitInvalidUsernameValidPassword() throws IOException
+	public void verifyUserLoginWithInvalidUsernameValidPassword() throws IOException
 	{
 		String userName = ExcelUtility.readStringData(2, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(2, 1, "LoginPage");

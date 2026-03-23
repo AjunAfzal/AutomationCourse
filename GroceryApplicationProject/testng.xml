@@ -4,8 +4,8 @@
 <listeners><listener class-name="reportgeneration.Listeners"></listener></listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testscripts.LoginTest">
-      <methods><include name="verifyUserLoginWithValidCredentials"></include></methods>
+      <class name="testscripts.AdminUsersTest">
+      <methods><include name="VerifyWhetherUserIsAbleToAddANewUser"></include></methods>
       </class>
     </classes>
   </test> <!-- Test -->

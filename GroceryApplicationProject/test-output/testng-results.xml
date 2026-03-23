@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-23T10:28:56 IST" name="Suite" finished-at="2026-03-23T10:29:01 IST" duration-ms="5366">
+  <suite started-at="2026-03-23T21:35:31 IST" name="Suite" finished-at="2026-03-23T21:35:36 IST" duration-ms="4672">
     <groups>
     </groups>
-    <test started-at="2026-03-23T10:28:56 IST" name="Test" finished-at="2026-03-23T10:29:01 IST" duration-ms="5366">
-      <class name="testscripts.LoginTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testscripts.LoginTest@7dfd3c81]" started-at="2026-03-23T10:28:56 IST" name="browserLaunch" finished-at="2026-03-23T10:28:59 IST" duration-ms="3067" status="PASS">
+    <test started-at="2026-03-23T21:35:31 IST" name="Test" finished-at="2026-03-23T21:35:36 IST" duration-ms="4672">
+      <class name="testscripts.AdminUsersTest">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testscripts.AdminUsersTest@71687585]" started-at="2026-03-23T21:35:31 IST" name="browserLaunch" finished-at="2026-03-23T21:35:33 IST" duration-ms="2000" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyUserLoginWithValidCredentials()[pri:1, instance:testscripts.LoginTest@7dfd3c81]" started-at="2026-03-23T10:28:59 IST" name="verifyUserLoginWithValidCredentials" description="Validate user login with valid creds" finished-at="2026-03-23T10:29:01 IST" duration-ms="2054" status="PASS">
+        <test-method signature="VerifyWhetherUserIsAbleToAddANewUser()[pri:0, instance:testscripts.AdminUsersTest@71687585]" started-at="2026-03-23T21:35:33 IST" name="VerifyWhetherUserIsAbleToAddANewUser" finished-at="2026-03-23T21:35:36 IST" duration-ms="2635" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLoginWithValidCredentials -->
-        <test-method is-config="true" signature="closeAndQuit(org.testng.ITestResult)[pri:0, instance:testscripts.LoginTest@7dfd3c81]" started-at="2026-03-23T10:29:01 IST" name="closeAndQuit" finished-at="2026-03-23T10:29:01 IST" duration-ms="191" status="PASS">
+        </test-method> <!-- VerifyWhetherUserIsAbleToAddANewUser -->
+        <test-method is-config="true" signature="closeAndQuit(org.testng.ITestResult)[pri:0, instance:testscripts.AdminUsersTest@71687585]" started-at="2026-03-23T21:35:36 IST" name="closeAndQuit" finished-at="2026-03-23T21:35:36 IST" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyUserLoginWithValidCredentials()[pri:1, instance:testscripts.LoginTest@7dfd3c81] output={null}]]]>
+                <![CDATA[[TestResult name=VerifyWhetherUserIsAbleToAddANewUser status=SUCCESS method=AdminUsersTest.VerifyWhetherUserIsAbleToAddANewUser()[pri:0, instance:testscripts.AdminUsersTest@71687585] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAndQuit -->
-      </class> <!-- testscripts.LoginTest -->
+      </class> <!-- testscripts.AdminUsersTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>
