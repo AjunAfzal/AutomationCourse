@@ -2,31 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-03-18T00:33:27 IST" name="Default suite" finished-at="2026-03-18T00:33:31 IST" duration-ms="3402">
+  <suite started-at="2026-03-23T10:28:56 IST" name="Suite" finished-at="2026-03-23T10:29:01 IST" duration-ms="5366">
     <groups>
     </groups>
-    <test started-at="2026-03-18T00:33:27 IST" name="Default test" finished-at="2026-03-18T00:33:31 IST" duration-ms="3402">
-      <class name="testscripts.HomeTest">
-        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testscripts.HomeTest@145f66e3]" started-at="2026-03-18T00:33:27 IST" name="browserLaunch" finished-at="2026-03-18T00:33:29 IST" duration-ms="1864" status="PASS">
+    <test started-at="2026-03-23T10:28:56 IST" name="Test" finished-at="2026-03-23T10:29:01 IST" duration-ms="5366">
+      <class name="testscripts.LoginTest">
+        <test-method is-config="true" signature="browserLaunch()[pri:0, instance:testscripts.LoginTest@7dfd3c81]" started-at="2026-03-23T10:28:56 IST" name="browserLaunch" finished-at="2026-03-23T10:28:59 IST" duration-ms="3067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserLaunch -->
-        <test-method signature="verifyUserIsAbleToSuccessfullyLogout()[pri:0, instance:testscripts.HomeTest@145f66e3]" started-at="2026-03-18T00:33:29 IST" name="verifyUserIsAbleToSuccessfullyLogout" finished-at="2026-03-18T00:33:31 IST" duration-ms="1508" status="PASS">
+        <test-method signature="verifyUserLoginWithValidCredentials()[pri:1, instance:testscripts.LoginTest@7dfd3c81]" started-at="2026-03-23T10:28:59 IST" name="verifyUserLoginWithValidCredentials" description="Validate user login with valid creds" finished-at="2026-03-23T10:29:01 IST" duration-ms="2054" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserIsAbleToSuccessfullyLogout -->
-        <test-method is-config="true" signature="closeAndQuit(org.testng.ITestResult)[pri:0, instance:testscripts.HomeTest@145f66e3]" started-at="2026-03-18T00:33:31 IST" name="closeAndQuit" finished-at="2026-03-18T00:33:31 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- verifyUserLoginWithValidCredentials -->
+        <test-method is-config="true" signature="closeAndQuit(org.testng.ITestResult)[pri:0, instance:testscripts.LoginTest@7dfd3c81]" started-at="2026-03-23T10:29:01 IST" name="closeAndQuit" finished-at="2026-03-23T10:29:01 IST" duration-ms="191" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyUserIsAbleToSuccessfullyLogout status=SUCCESS method=HomeTest.verifyUserIsAbleToSuccessfullyLogout()[pri:0, instance:testscripts.HomeTest@145f66e3] output={null}]]]>
+                <![CDATA[[TestResult name=verifyUserLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyUserLoginWithValidCredentials()[pri:1, instance:testscripts.LoginTest@7dfd3c81] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeAndQuit -->
-      </class> <!-- testscripts.HomeTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testscripts.LoginTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
