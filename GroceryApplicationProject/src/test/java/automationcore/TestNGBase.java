@@ -11,27 +11,24 @@ import org.testng.annotations.BeforeMethod;
 
 import utilities.ScreenshotUtility;
 
-public class TestNGBase 
-{
+public class TestNGBase {
 	public WebDriver driver;
-	
+
 	@BeforeMethod
-	public void browserLaunch()
-	{
+	public void browserLaunch() {
 		driver = new ChromeDriver();
 		driver.get("https://groceryapp.uniqassosiates.com/admin/login");
 		driver.manage().window().maximize();
+		// ImplicitWait
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 	}
-	
+
 	@AfterMethod
-	public void closeAndQuit(ITestResult iTestResult) throws IOException 
-	{ 
- 		if (iTestResult.getStatus() == ITestResult.FAILURE) 
- 		{ 
-   			ScreenshotUtility screenShot = new ScreenshotUtility(); 
- 			screenShot.getScreenshot(driver, iTestResult.getName()); 
- 		} 
- 		//driver.quit(); 
- 	}
+	public void closeAndQuit(ITestResult iTestResult) throws IOException {
+		if (iTestResult.getStatus() == ITestResult.FAILURE) {
+			ScreenshotUtility screenShot = new ScreenshotUtility();
+			screenShot.getScreenshot(driver, iTestResult.getName());
+		}
+		// driver.quit();
+	}
 }

@@ -5,32 +5,38 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage 
-{
+public class HomePage {
 	public WebDriver driver;
-	public HomePage(WebDriver driver)
-	{
-		this.driver=driver;
+
+	public HomePage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+
+	@FindBy(xpath = "//a[@data-toggle='dropdown']")
+	WebElement profileDropdown;
+	@FindBy(xpath = "//i[@class='ace-icon fa fa-power-off']")
+	WebElement logoutOption;
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']")
+	WebElement adminUserTile;
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']")
+	WebElement manageNewsTile;
 	
-	@FindBy(xpath = "//a[@data-toggle='dropdown']") WebElement profileDropdown;
-	@FindBy(xpath = "//i[@class='ace-icon fa fa-power-off']") WebElement logoutOption;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='small-box-footer']") WebElement adminUserPage;
-	
-	public void clickOnProfileDropdown()
-	{
+	public void clickOnProfileDropdown() {
 		profileDropdown.click();
 	}
-	
-	public void clickOnLogoutOption()
-	{
+
+	public void clickOnLogoutOption() {
 		logoutOption.click();
 	}
+
+	// Clicking on MoreInfo of Admin User Tile
+	public void clickOnAdminUserTile() {
+		adminUserTile.click();
+	}
 	
-	//Clicking on MoreInfor of Admin User Tile
-	public void clickOnAdminUserOption()
-	{
-		adminUserPage.click();
+	// Clicking on MoreInfo of Manage News Tile
+	public void clickOnManageNewsTile() {
+		manageNewsTile.click();
 	}
 }

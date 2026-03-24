@@ -6,54 +6,81 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
-public class AdminUsersPage 
-{
+public class AdminUsersPage {
 	public WebDriver driver;
-	public AdminUsersPage(WebDriver driver)
-	{
-		this.driver=driver;
+
+	public AdminUsersPage(WebDriver driver) {
+		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
-	
-	//For Adding New User
-	@FindBy(xpath = "//a[@href='javascript:void(0)' and @onclick='click_button(1)']") WebElement newButton;
-	@FindBy(xpath = "//input[@id='username']") WebElement newUserField;
-	@FindBy(xpath = "//input[@id='password']") WebElement newPasswordField;
-	@FindBy(xpath = "//select[@id='user_type']") WebElement newUserTypeDropDown;
-	@FindBy(xpath = "//button[@name='Create' and @class='btn btn-block-sm btn-danger']") WebElement newUserSaveButton;
-	
-	//For Searching a User
-	@FindBy(xpath = "//a[@href='javascript:void(0)' and @onclick='click_button(2)']") WebElement searchButton;
-	@FindBy(id="un") WebElement searchUserField;
-	@FindBy(id="ut") WebElement searchUserTypeDropDown;
-	@FindBy(xpath ="//button[@name='Search' and @class='btn btn-block-sm btn-danger']") WebElement searchUserButton;
-	
-	//For Reset Option
-	@FindBy(xpath ="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='btn btn-rounded btn-warning']") WebElement resetButton;
-	
-	public void newUserCreation()
-	{
+
+	// For Adding New User
+	@FindBy(xpath = "//a[@href='javascript:void(0)' and @onclick='click_button(1)']")
+	WebElement newButton;
+	@FindBy(xpath = "//input[@id='username']")
+	WebElement newUserField;
+	@FindBy(xpath = "//input[@id='password']")
+	WebElement newPasswordField;
+	@FindBy(xpath = "//select[@id='user_type']")
+	WebElement newUserTypeDropDown;
+	@FindBy(xpath = "//button[@name='Create' and @class='btn btn-block-sm btn-danger']")
+	WebElement newUserSaveButton;
+
+	// For Searching a User
+	@FindBy(xpath = "//a[@href='javascript:void(0)' and @onclick='click_button(2)']")
+	WebElement searchButton;
+	@FindBy(id = "un")
+	WebElement searchUserField;
+	@FindBy(id = "ut")
+	WebElement searchUserTypeDropDown;
+	@FindBy(xpath = "//button[@name='Search' and @class='btn btn-block-sm btn-danger']")
+	WebElement searchUserButton;
+
+	// For Reset Option
+	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='btn btn-rounded btn-warning']")
+	WebElement resetButton;
+
+	public void clickOnNewButton() {
 		newButton.click();
-		newUserField.sendKeys("Big");
-		newPasswordField.sendKeys("Lebowski");
+	}
+
+	public void enterNewUserNameOnUserNameField(String newUserName) {
+		newUserField.sendKeys(newUserName);
+	}
+
+	public void enterNewPasswordOnPasswordField(String newPassword) {
+		newPasswordField.sendKeys(newPassword);
+	}
+
+	public void clickOnNewUserTypeDropDown() {
 		newUserTypeDropDown.click();
-		Select select=new Select(newUserTypeDropDown);
-		select.selectByIndex(2);
-		newUserSaveButton.click();		
 	}
-	
-	public void userSearch()
-	{
+
+	public void selectUserTypeFromUserTypeDropDown() {
+		Select select = new Select(newUserTypeDropDown);
+		select.selectByIndex(2);
+		newUserSaveButton.click();
+	}
+
+	public void clickOnSearchButton() {
 		searchButton.click();
-		searchUserField.sendKeys("Big");
-		searchUserTypeDropDown.click();
-		Select select=new Select(searchUserTypeDropDown);
-		select.selectByIndex(2);
-		searchUserButton.click();		
 	}
-	
-	public void resetAction()
-	{
+
+	public void searchUsingUserName(String newUserName) {
+		searchUserField.sendKeys(newUserName);
+	}
+
+	public void clickOnSearchUserTypeDropDown() {
+		searchUserTypeDropDown.click();
+	}
+
+	public void selectFromSearchUserTypeDropDown() {
+		Select select = new Select(searchUserTypeDropDown);
+		select.selectByIndex(2);
+		searchUserButton.click();
+	}
+
+	public void resetAction() {
 		resetButton.click();
 	}
 }
