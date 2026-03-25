@@ -9,9 +9,9 @@
     <classes>
       <class name="testscripts.LoginTest">
         <methods>
+          <include name="verifyUserLoginWithInvalidUsernameValidPassword"/>
           <include name="browserLaunch"/>
           <include name="closeAndQuit"/>
-          <include name="verifyUserLoginWithValidUsernameInvalidPassword"/>
         </methods>
       </class> <!-- testscripts.LoginTest -->
     </classes>

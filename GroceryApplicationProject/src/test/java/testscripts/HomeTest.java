@@ -2,6 +2,7 @@ package testscripts;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import automationcore.TestNGBase;
@@ -23,5 +24,9 @@ public class HomeTest extends TestNGBase {
 		HomePage logout = new HomePage(driver);
 		logout.clickOnProfileDropdown();
 		logout.clickOnLogoutOption();
+		
+		String actualText = login.getPageText();
+		String expectedText = "7rmart supermarket";
+		Assert.assertEquals(actualText, expectedText, "User was able to log out from the application");
 	}
 }

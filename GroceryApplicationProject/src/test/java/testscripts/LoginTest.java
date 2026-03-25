@@ -20,7 +20,7 @@ public class LoginTest extends TestNGBase {
 		login.clickLoginButton();
 		
 		boolean dashboardDisplayed = login.isDashboardDisplayed();
-		Assert.assertTrue(dashboardDisplayed, "Cannot login with valid creds");
+		Assert.assertTrue(dashboardDisplayed, "User was unable to login with valid creds");
 	}
 
 	@Test(priority = 2, description = "Validate user login with valid username and invalid password")
@@ -34,7 +34,7 @@ public class LoginTest extends TestNGBase {
 		
 		String actualText = login.getPageText();
 		String expectedText = "7rmart supermarket";
-		Assert.assertEquals(actualText, expectedText, "User was able to log in using Invalid Username");
+		Assert.assertEquals(actualText, expectedText, "User was able to log in using Invalid Password");
 	}
 
 	@Test(priority = 3, description = "Validate user login with invalid username and valid password")
@@ -45,6 +45,9 @@ public class LoginTest extends TestNGBase {
 		login.enterUsernameOnUsernameField(userName);
 		login.enterPasswordOnPasswordField(password);
 		login.clickLoginButton();
+		
+		boolean loginPageDisplayed = login.isLoginPageDisplayed();
+		Assert.assertTrue(loginPageDisplayed, "User was able to log in using Invalid Username");
 	}
 
 	@Test(priority = 4, description = "Validate user login with invalid creds", groups = {"smoke"})
@@ -55,5 +58,8 @@ public class LoginTest extends TestNGBase {
 		login.enterUsernameOnUsernameField(userName);
 		login.enterPasswordOnPasswordField(password);
 		login.clickLoginButton();
+		
+		boolean loginPageDisplayed = login.isLoginPageDisplayed();
+		Assert.assertFalse(!loginPageDisplayed, "Logged in with invalid creds");
 	}
 }

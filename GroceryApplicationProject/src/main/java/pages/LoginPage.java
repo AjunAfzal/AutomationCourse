@@ -40,6 +40,10 @@ public class LoginPage {
 		return dashboard.isDisplayed();
 	}
 	
+	public boolean isLoginPageDisplayed() {
+		return pageText.isDisplayed();
+	}
+	
 	public String getPageText() { 
 		return pageText.getText();
 	}
