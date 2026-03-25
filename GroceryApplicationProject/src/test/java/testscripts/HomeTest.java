@@ -10,7 +10,7 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class HomeTest extends TestNGBase {
-	@Test
+	@Test (description = "Validate user is able to logout from the application")
 	public void verifyUserIsAbleToSuccessfullyLogout() throws IOException {
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");

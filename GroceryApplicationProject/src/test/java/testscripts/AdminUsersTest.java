@@ -12,7 +12,7 @@ import utilities.ExcelUtility;
 import utilities.FakerUtility;
 
 public class AdminUsersTest extends TestNGBase {
-	@Test(priority = 1)
+	@Test(priority = 1, description = "Validate adding a new User")
 	public void VerifyWhetherUserIsAbleToAddANewUser() throws IOException {
 		
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
@@ -40,7 +40,7 @@ public class AdminUsersTest extends TestNGBase {
 		adminUserPage.selectUserTypeFromUserTypeDropDown();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, description = "Validate searching for a User")
 	public void VerifyWhetherUserIsAbleToSearchForAUser() throws IOException {
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
@@ -62,7 +62,7 @@ public class AdminUsersTest extends TestNGBase {
 		adminUserPage.selectFromSearchUserTypeDropDown();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, description = "Validate resetting the data in Admin Users page")
 	public void VerifyWhetherUserIsAbleToResetTheData() throws IOException {
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");

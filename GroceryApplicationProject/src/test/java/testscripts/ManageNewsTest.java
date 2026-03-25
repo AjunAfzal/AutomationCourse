@@ -11,8 +11,7 @@ import pages.ManageNewsPage;
 import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase {
-	@Test(priority = 1)
-
+	@Test(priority = 1, description = "Validate adding a new News")
 	public void VerifyWhetherUserIsAbleToAddANewNews() throws IOException {
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
@@ -33,7 +32,7 @@ public class ManageNewsTest extends TestNGBase {
 		manageNPage.clickOnSaveButton();
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, description = "Validate searching for a News")
 	public void VerifyWhetherUserIsAbleToSearchForANews() throws IOException {
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
@@ -54,7 +53,7 @@ public class ManageNewsTest extends TestNGBase {
 		manageNPage.clickOnSearchSubmitButton();
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, description = "Validate resetting the data in Manage News page")
 	public void VerifyWhetherUserIsAbleToResetTheData() throws IOException {
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
