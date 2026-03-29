@@ -60,7 +60,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="group-Suite" class="navigator-link ">
-                    <span>0 groups</span>
+                    <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,27 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInvalidCredentials(admin123, 123)">verifyUserLoginWithInvalidCredentials(admin123, 123)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInvalidCredentials(admin, admin22)">verifyUserLoginWithInvalidCredentials(admin, admin22)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithInvalidUsernameValidPassword">verifyUserLoginWithInvalidUsernameValidPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithValidCredentials">verifyUserLoginWithValidCredentials</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.LoginTest" class="method navigator-link" hash-for-method="verifyUserLoginWithValidUsernameInvalidPassword">verifyUserLoginWithValidUsernameInvalidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -126,11 +146,49 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="verifyUserLoginWithInvalidCredentials(admin123, 123)">
+                  </a> <!-- verifyUserLoginWithInvalidCredentials(admin123, 123) -->
+                  <span class="method-name">verifyUserLoginWithInvalidCredentials</span>
+                  <span class="parameters">(admin123,123)</span>
+                  <em>
+(Validate user login with invalid creds)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithInvalidCredentials(admin, admin22)">
+                  </a> <!-- verifyUserLoginWithInvalidCredentials(admin, admin22) -->
+                  <span class="method-name">verifyUserLoginWithInvalidCredentials</span>
+                  <span class="parameters">(admin,admin22)</span>
+                  <em>
+(Validate user login with invalid creds)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="verifyUserLoginWithInvalidUsernameValidPassword">
                   </a> <!-- verifyUserLoginWithInvalidUsernameValidPassword -->
                   <span class="method-name">verifyUserLoginWithInvalidUsernameValidPassword</span>
                   <em>
 (Validate user login with invalid username and valid password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithValidCredentials">
+                  </a> <!-- verifyUserLoginWithValidCredentials -->
+                  <span class="method-name">verifyUserLoginWithValidCredentials</span>
+                  <em>
+(Validate user login with valid creds)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyUserLoginWithValidUsernameInvalidPassword">
+                  </a> <!-- verifyUserLoginWithValidUsernameInvalidPassword -->
+                  <span class="method-name">verifyUserLoginWithValidUsernameInvalidPassword</span>
+                  <em>
+(Validate user login with valid username and invalid password)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -151,11 +209,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscripts.LoginTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verifyUserLoginWithInvalidUsernameValidPassword&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testscripts.LoginTest --&gt;
+      &lt;class name=&quot;testscripts.LoginTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -179,6 +233,18 @@
             <span class="header-content">Groups for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="test-group">
+              <span class="test-group-name">smoke</span>
+              <br/>
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUserLoginWithInvalidCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+              <div class="method-in-group">
+                <span class="method-in-group-name">verifyUserLoginWithValidCredentials</span>
+                <br/>
+              </div> <!-- method-in-group -->
+            </div> <!-- test-group -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="times-Suite" class="panel">
@@ -195,16 +261,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserLoginWithInvalidUsernameValidPassword')
+data.setCell(0, 1, 'verifyUserLoginWithValidCredentials')
 data.setCell(0, 2, 'testscripts.LoginTest')
-data.setCell(0, 3, 1045);
+data.setCell(0, 3, 1491);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'verifyUserLoginWithInvalidUsernameValidPassword')
+data.setCell(1, 2, 'testscripts.LoginTest')
+data.setCell(1, 3, 831);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verifyUserLoginWithInvalidCredentials')
+data.setCell(2, 2, 'testscripts.LoginTest')
+data.setCell(2, 3, 735);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'verifyUserLoginWithValidUsernameInvalidPassword')
+data.setCell(3, 2, 'testscripts.LoginTest')
+data.setCell(3, 3, 720);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyUserLoginWithInvalidCredentials')
+data.setCell(4, 2, 'testscripts.LoginTest')
+data.setCell(4, 3, 625);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,20 +301,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">3 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">testscripts.LoginTest</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">verifyUserLoginWithValidCredentials</span>
-                <br/>
-                <span class="ignored-method-name">verifyUserLoginWithInvalidCredentials</span>
-                <br/>
-                <span class="ignored-method-name">verifyUserLoginWithValidUsernameInvalidPassword</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -247,12 +318,60 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <span class="method-name">verifyUserLoginWithValidCredentials</span>
+                <span class="method-start">2258 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeAndQuit([TestResult name=verifyUserLoginWithValidCredentials status=SUCCESS method=LoginTest.verifyUserLogin...)</span>
+                <span class="method-start">3750 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">browserLaunch(chrome)</span>
+                <span class="method-start">3883 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithValidUsernameInvalidPassword</span>
+                <span class="method-start">5587 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeAndQuit([TestResult name=verifyUserLoginWithValidUsernameInvalidPassword status=SUCCESS method=LoginTest.ver...)</span>
+                <span class="method-start">6307 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">browserLaunch(chrome)</span>
+                <span class="method-start">6465 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
                 <span class="method-name">verifyUserLoginWithInvalidUsernameValidPassword</span>
-                <span class="method-start">2592 ms</span>
+                <span class="method-start">8168 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeAndQuit([TestResult name=verifyUserLoginWithInvalidUsernameValidPassword status=SUCCESS method=LoginTest.ver...)</span>
-                <span class="method-start">3644 ms</span>
+                <span class="method-start">9000 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">browserLaunch(chrome)</span>
+                <span class="method-start">9168 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithInvalidCredentials(admin, admin22)</span>
+                <span class="method-start">11197 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeAndQuit([TestResult name=verifyUserLoginWithInvalidCredentials status=SUCCESS method=LoginTest.verifyUserLog...)</span>
+                <span class="method-start">11822 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">browserLaunch(chrome)</span>
+                <span class="method-start">11986 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifyUserLoginWithInvalidCredentials(admin123, 123)</span>
+                <span class="method-start">13614 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeAndQuit([TestResult name=verifyUserLoginWithInvalidCredentials status=SUCCESS method=LoginTest.verifyUserLog...)</span>
+                <span class="method-start">14349 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

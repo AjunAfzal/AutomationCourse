@@ -14,12 +14,14 @@ import org.testng.annotations.Parameters;
 
 import utilities.ScreenshotUtility;
 
-public class TestNGBase {
+public class TestNGBase 
+{
 	public WebDriver driver;
 
 	@BeforeMethod(alwaysRun = true)
 	@Parameters ("browsers")
-	public void browserLaunch(String browsers) throws Exception {
+	public void browserLaunch(String browsers) throws Exception 
+	{
 		if(browsers.equalsIgnoreCase("Chrome"))
 		{
 			driver = new ChromeDriver();
@@ -28,12 +30,10 @@ public class TestNGBase {
 		{
 			driver = new FirefoxDriver();
 		}
-		
 		else if (browsers.equalsIgnoreCase("Edge"))
 		{
 			driver = new EdgeDriver();
 		}
-		
 		else 
 		{
 			throw new Exception("Invalid Browser");
@@ -46,8 +46,10 @@ public class TestNGBase {
 	}
 
 	@AfterMethod(alwaysRun = true)
-	public void closeAndQuit(ITestResult iTestResult) throws IOException {
-		if (iTestResult.getStatus() == ITestResult.FAILURE) {
+	public void closeAndQuit(ITestResult iTestResult) throws IOException 
+	{
+		if (iTestResult.getStatus() == ITestResult.FAILURE) 
+		{
 			ScreenshotUtility screenShot = new ScreenshotUtility();
 			screenShot.getScreenshot(driver, iTestResult.getName());
 		}

@@ -5,8 +5,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReportUtility 
 {
-	public static final ExtentReports extentReports = new ExtentReports();// static instance of extentreports that can 
-		// be shared accross the application 
+	public static final ExtentReports extentReports = new ExtentReports();// static instance of extentreports that can be shared across the application 
 
 	public synchronized static ExtentReports createExtentReports() 
 	{ 

@@ -9,10 +9,8 @@
 			</run>
 		</groups>
 		<classes>
-			<class name="testscripts.LoginTest">
+			<class name="testscripts.AdminUsersTest">
 			</class>
 		</classes>
-	</test> <!--
-	Test -->
-</suite> <!--
-Suite -->
+	</test> <!--Test -->
+</suite> <!--Suite -->
