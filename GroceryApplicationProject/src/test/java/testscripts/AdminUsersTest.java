@@ -30,6 +30,7 @@ public class AdminUsersTest extends TestNGBase
 		HomePage clickAuthUsersTile = new HomePage(driver);
 		clickAuthUsersTile.clickOnAdminUserTile();
 
+		// Create Random Username and Password using Faker
 		FakerUtility faker = new FakerUtility();
 		String newUserName = faker.createRandomUserName();
 		String newPassword = faker.createRandomPassword();

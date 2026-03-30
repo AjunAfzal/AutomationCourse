@@ -59,6 +59,7 @@ public class LoginTest extends TestNGBase
 	@Test(priority = 4, description = "Validate user login with invalid creds", groups = {"smoke"}, dataProvider = "loginProvider")
 	public void verifyUserLoginWithInvalidCredentials(String userName, String password) throws IOException 
 	{
+		//Direct Read from Excel not used now as we are getting data from DataProvider
 		//String userName = ExcelUtility.readStringData(3, 0, "LoginPage");
 		//String password = ExcelUtility.readStringData(3, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
@@ -71,8 +72,10 @@ public class LoginTest extends TestNGBase
 	}
 	 @DataProvider(name = "loginProvider") 
 	 public Object[][] getDataFromDataProvider() throws IOException 
-	 {	  
+	 {	 
+		 //Data provider input values shared by user
 	 	return new Object[][] { new Object[] { "admin", "admin22" }, new Object[] { "admin123", "123" }}; 
-	 	//new Object[] {ExcelUtility.readStringData(3, 0, "LoginPage"),ExcelUtility.readStringData(3, 1, "LoginPage")}}; 		
+	 	//Data provider input values taken from excel sheet
+	 	//return new Object[][] { new Object[] {ExcelUtility.readStringData(3, 0, "LoginPage"),ExcelUtility.readStringData(3, 1, "LoginPage")}}; 		
 	 }
 }
