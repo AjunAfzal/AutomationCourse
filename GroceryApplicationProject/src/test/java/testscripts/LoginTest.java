@@ -8,20 +8,24 @@ import org.testng.annotations.Test;
 
 import automationcore.TestNGBase;
 import constants.Constant;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends TestNGBase 
 {
+	HomePage home;
+	
 	@Test(priority = 1, description = "Validate user login with valid creds", groups = {"smoke"})
 	public void verifyUserLoginWithValidCredentials() throws IOException 
 	{
 		String userName = ExcelUtility.readStringData(0, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		// Method Chaining. Control stays in same page. Add them using "."
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password);
+		// Created Object of HomePage and called using that
+		home=login.clickLoginButton();
 		
 		boolean dashboardDisplayed = login.isDashboardDisplayed();
 		Assert.assertTrue(dashboardDisplayed, Constant.ValidLoginCredsError);
@@ -33,9 +37,7 @@ public class LoginTest extends TestNGBase
 		String userName = ExcelUtility.readStringData(1, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(1, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password).clickLoginButton();
 		
 		String actualText = login.getPageText();
 		String expectedText = "7rmart supermarket";
@@ -48,10 +50,8 @@ public class LoginTest extends TestNGBase
 		String userName = ExcelUtility.readStringData(2, 0, "LoginPage");
 		String password = ExcelUtility.readStringData(2, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
-		
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password).clickLoginButton();
+
 		boolean loginPageDisplayed = login.isLoginPageDisplayed();
 		Assert.assertTrue(loginPageDisplayed, Constant.InvalidLoginUsernameError);
 	}
@@ -63,10 +63,8 @@ public class LoginTest extends TestNGBase
 		//String userName = ExcelUtility.readStringData(3, 0, "LoginPage");
 		//String password = ExcelUtility.readStringData(3, 1, "LoginPage");
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
-		
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password).clickLoginButton();
+
 		boolean loginPageDisplayed = login.isLoginPageDisplayed();
 		Assert.assertFalse(!loginPageDisplayed, Constant.InvalidLoginCredsError);
 	}

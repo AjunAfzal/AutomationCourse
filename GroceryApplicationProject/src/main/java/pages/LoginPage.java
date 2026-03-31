@@ -21,19 +21,24 @@ public class LoginPage
 	@FindBy(xpath = "//p[text() = 'Dashboard']") WebElement dashboard;
 	@FindBy(xpath = "//b[text()='7rmart supermarket']") WebElement pageText;
 
-	public void enterUsernameOnUsernameField(String userName) 
+	public LoginPage enterUsernameOnUsernameField(String userName) 
 	{
 		usernameField.sendKeys(userName);
+		return this;
 	}
 
-	public void enterPasswordOnPasswordField(String password) 
+	// We are staying in the same page. Hence replaced void with Class Name and added return this
+	public LoginPage enterPasswordOnPasswordField(String password) 
 	{
 		passwordField.sendKeys(password);
+		return this;
 	}
 
-	public void clickLoginButton() 
+	// Navigating to home page after login. So replaced void with HomePage and added return statement to home page
+	public HomePage clickLoginButton() 
 	{
 		loginButton.click();
+		return new HomePage(driver);
 	}
 	
 	public boolean isDashboardDisplayed() 

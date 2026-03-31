@@ -33,66 +33,78 @@ public class AdminUsersPage
 	// For Reset Option
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin' and @class='btn btn-rounded btn-warning']") WebElement resetButton;
 
-	public void clickOnNewButton() 
+	public AdminUsersPage clickOnNewButton() 
 	{
 		newButton.click();
+		return this;
 	}
 
-	public void enterNewUserNameOnUserNameField(String newUserName) 
+	public AdminUsersPage enterNewUserNameOnUserNameField(String newUserName) 
 	{
 		newUserField.sendKeys(newUserName);
+		return this;
 	}
 
-	public void enterNewPasswordOnPasswordField(String newPassword) 
+	public AdminUsersPage enterNewPasswordOnPasswordField(String newPassword) 
 	{
 		newPasswordField.sendKeys(newPassword);
+		return this;
 	}
 
-	public void clickOnNewUserTypeDropDown() 
+	public AdminUsersPage clickOnNewUserTypeDropDown() 
 	{
 		newUserTypeDropDown.click();
+		return this;
 	}
 
-	public void selectUserTypeFromUserTypeDropDown() 
+	public AdminUsersPage selectUserTypeFromUserTypeDropDown() 
 	{
 		Select select = new Select(newUserTypeDropDown);
 		select.selectByIndex(2);
+		return this;
 	}
 	
-	public void clickOnSaveButtonOfNewUserTypeDropDown()
+	public AdminUsersPage clickOnSaveButtonOfNewUserTypeDropDown()
 	{
 		newUserSaveButton.click();
+		return this;
 	}
 
-	public void clickOnSearchButton() 
+	public AdminUsersPage clickOnSearchButton() 
 	{
 		searchButton.click();
+		return this;
 	}
 
-	public void searchUsingUserName(String newUserName) 
+	public AdminUsersPage searchUsingUserName(String newUserName) 
 	{
 		searchUserField.sendKeys(newUserName);
+		return this;
 	}
 
-	public void clickOnSearchUserTypeDropDown() 
+	public AdminUsersPage clickOnSearchUserTypeDropDown() 
 	{
 		searchUserTypeDropDown.click();
+		return this;
 	}
 
-	public void selectFromSearchUserTypeDropDown() 
+	public AdminUsersPage selectFromSearchUserTypeDropDown() 
 	{
 		Select select = new Select(searchUserTypeDropDown);
 		select.selectByIndex(2);
+		return this;
 	}
 	
-	public void clickOnSaveButtonOfSearchUserTypeDropDown()
+	public AdminUsersPage clickOnSaveButtonOfSearchUserTypeDropDown()
 	{
 		searchUserButton.click();
+		return this;
 	}
 
-	public void resetAction() 
+	public AdminUsersPage resetAction() 
 	{
 		resetButton.click();
+		return this;
 	}
 
 	public boolean isNewAdminUsersPageDisplayed() 

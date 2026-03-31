@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">3 methods,   3 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,7 +103,17 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscripts.HomeTest" class="method navigator-link" hash-for-method="verifyUserIsAbleToSuccessfullyLogout">verifyUserIsAbleToSuccessfullyLogout</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testscripts.ManageNewsTest" class="method navigator-link" hash-for-method="VerifyWhetherUserIsAbleToAddANewNews">VerifyWhetherUserIsAbleToAddANewNews</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.ManageNewsTest" class="method navigator-link" hash-for-method="VerifyWhetherUserIsAbleToResetTheData">VerifyWhetherUserIsAbleToResetTheData</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testscripts.ManageNewsTest" class="method navigator-link" hash-for-method="VerifyWhetherUserIsAbleToSearchForANews">VerifyWhetherUserIsAbleToSearchForANews</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -121,16 +131,34 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testscripts.HomeTest</span>
+              <span class="class-name">testscripts.ManageNewsTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyUserIsAbleToSuccessfullyLogout">
-                  </a> <!-- verifyUserIsAbleToSuccessfullyLogout -->
-                  <span class="method-name">verifyUserIsAbleToSuccessfullyLogout</span>
+                  <a name="VerifyWhetherUserIsAbleToAddANewNews">
+                  </a> <!-- VerifyWhetherUserIsAbleToAddANewNews -->
+                  <span class="method-name">VerifyWhetherUserIsAbleToAddANewNews</span>
                   <em>
-(Validate user is able to logout from the application)                  </em>
+(Validate adding a new News)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyWhetherUserIsAbleToResetTheData">
+                  </a> <!-- VerifyWhetherUserIsAbleToResetTheData -->
+                  <span class="method-name">VerifyWhetherUserIsAbleToResetTheData</span>
+                  <em>
+(Validate resetting the data in Manage News page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="VerifyWhetherUserIsAbleToSearchForANews">
+                  </a> <!-- VerifyWhetherUserIsAbleToSearchForANews -->
+                  <span class="method-name">VerifyWhetherUserIsAbleToSearchForANews</span>
+                  <em>
+(Validate searching for a News)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -151,11 +179,7 @@
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testscripts.HomeTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;verifyUserIsAbleToSuccessfullyLogout&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- testscripts.HomeTest --&gt;
+      &lt;class name=&quot;testscripts.ManageNewsTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -195,16 +219,24 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyUserIsAbleToSuccessfullyLogout')
-data.setCell(0, 2, 'testscripts.HomeTest')
-data.setCell(0, 3, 1739);
+data.setCell(0, 1, 'VerifyWhetherUserIsAbleToAddANewNews')
+data.setCell(0, 2, 'testscripts.ManageNewsTest')
+data.setCell(0, 3, 4752);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'VerifyWhetherUserIsAbleToSearchForANews')
+data.setCell(1, 2, 'testscripts.ManageNewsTest')
+data.setCell(1, 3, 2007);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'VerifyWhetherUserIsAbleToResetTheData')
+data.setCell(2, 2, 'testscripts.ManageNewsTest')
+data.setCell(2, 3, 1578);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 seconds</span>
+              <span class="suite-total-time">Total running time: 8 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -230,18 +262,42 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testscripts.HomeTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testscripts.ManageNewsTest</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">browserLaunch(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">verifyUserIsAbleToSuccessfullyLogout</span>
-                <span class="method-start">1805 ms</span>
+                <span class="method-name">VerifyWhetherUserIsAbleToAddANewNews</span>
+                <span class="method-start">1804 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">closeAndQuit([TestResult name=verifyUserIsAbleToSuccessfullyLogout status=SUCCESS method=HomeTest.verifyUserIsAbl...)</span>
-                <span class="method-start">3551 ms</span>
+                <span class="method-name">closeAndQuit([TestResult name=VerifyWhetherUserIsAbleToAddANewNews status=SUCCESS method=ManageNewsTest.VerifyWhe...)</span>
+                <span class="method-start">6562 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">browserLaunch(chrome)</span>
+                <span class="method-start">6712 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">VerifyWhetherUserIsAbleToSearchForANews</span>
+                <span class="method-start">8113 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeAndQuit([TestResult name=VerifyWhetherUserIsAbleToSearchForANews status=SUCCESS method=ManageNewsTest.Verify...)</span>
+                <span class="method-start">10120 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">browserLaunch(chrome)</span>
+                <span class="method-start">10269 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">VerifyWhetherUserIsAbleToResetTheData</span>
+                <span class="method-start">11905 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">closeAndQuit([TestResult name=VerifyWhetherUserIsAbleToResetTheData status=SUCCESS method=ManageNewsTest.VerifyWh...)</span>
+                <span class="method-start">13483 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

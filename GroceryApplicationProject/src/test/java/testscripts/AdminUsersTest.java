@@ -15,6 +15,8 @@ import utilities.FakerUtility;
 
 public class AdminUsersTest extends TestNGBase 
 {
+	HomePage home;
+	
 	@Test(priority = 1, description = "Validate adding a new User", groups = { "smoke" })
 	public void VerifyWhetherUserIsAbleToAddANewUser() throws IOException 
 	{
@@ -23,9 +25,8 @@ public class AdminUsersTest extends TestNGBase
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password);
+		home=login.clickLoginButton();
 
 		HomePage clickAuthUsersTile = new HomePage(driver);
 		clickAuthUsersTile.clickOnAdminUserTile();
@@ -36,12 +37,8 @@ public class AdminUsersTest extends TestNGBase
 		String newPassword = faker.createRandomPassword();
 
 		AdminUsersPage adminUserPage = new AdminUsersPage(driver);
-		adminUserPage.clickOnNewButton();
-		adminUserPage.enterNewUserNameOnUserNameField(newUserName);
-		adminUserPage.enterNewPasswordOnPasswordField(newPassword);
-		adminUserPage.clickOnNewUserTypeDropDown();
-		adminUserPage.selectUserTypeFromUserTypeDropDown();
-		adminUserPage.clickOnSaveButtonOfNewUserTypeDropDown();
+		adminUserPage.clickOnNewButton().enterNewUserNameOnUserNameField(newUserName).enterNewPasswordOnPasswordField(newPassword)
+		.clickOnNewUserTypeDropDown().selectUserTypeFromUserTypeDropDown().clickOnSaveButtonOfNewUserTypeDropDown();
 
 		boolean newAdminUsersSaveButton = adminUserPage.isNewAdminUsersPageDisplayed();
 		Assert.assertTrue(newAdminUsersSaveButton, Constant.AddNewAdminUserError);
@@ -54,9 +51,8 @@ public class AdminUsersTest extends TestNGBase
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password);
+		home=login.clickLoginButton();
 
 		HomePage clickAuthUsersOption = new HomePage(driver);
 		clickAuthUsersOption.clickOnAdminUserTile();
@@ -64,11 +60,8 @@ public class AdminUsersTest extends TestNGBase
 		String newUserName = ExcelUtility.readStringData(0, 0, "AdminUsersPage");
 
 		AdminUsersPage adminUserPage = new AdminUsersPage(driver);
-		adminUserPage.clickOnSearchButton();
-		adminUserPage.searchUsingUserName(newUserName);
-		adminUserPage.clickOnSearchUserTypeDropDown();
-		adminUserPage.selectFromSearchUserTypeDropDown();
-		adminUserPage.clickOnSaveButtonOfSearchUserTypeDropDown();
+		adminUserPage.clickOnSearchButton().searchUsingUserName(newUserName).clickOnSearchUserTypeDropDown()
+		.selectFromSearchUserTypeDropDown().clickOnSaveButtonOfSearchUserTypeDropDown();
 
 		boolean searchAdminUsersSaveButton = adminUserPage.isSearchAdminUsersPageDisplayed();
 		Assert.assertTrue(searchAdminUsersSaveButton, Constant.SearchAdminUserError);
@@ -81,9 +74,8 @@ public class AdminUsersTest extends TestNGBase
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password);
+		home=login.clickLoginButton();
 
 		HomePage clickAuthUsersOption = new HomePage(driver);
 		clickAuthUsersOption.clickOnAdminUserTile();

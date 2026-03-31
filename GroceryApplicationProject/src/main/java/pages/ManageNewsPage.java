@@ -29,39 +29,46 @@ public class ManageNewsPage
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='btn btn-rounded btn-warning']") WebElement resetButton;
 	@FindBy(xpath = "//h4[text()='Manage News']") WebElement newsTableHeader;
 
-	public void clickOnNewButton() 
+	public ManageNewsPage clickOnNewButton() 
 	{
 		newButton.click();
+		return this;
 	}
 
-	public void enterNewNewsOnManageNewsField(String newNewsText) 
+	public ManageNewsPage enterNewNewsOnManageNewsField(String newNewsText) 
 	{
 		newNewsField.sendKeys(newNewsText);
+		return this;
 	}
 
-	public void clickOnSaveButton() 
+	public ManageNewsPage clickOnSaveButton() 
 	{
 		newNewsSaveButton.click();
+		return this;
 	}
 
-	public void clickOnSearchButton() 
+	public ManageNewsPage clickOnSearchButton() 
 	{
 		searchButton.click();
+		return this;
 	}
 
-	public void searchForANews(String searchNewsText) 
+	public ManageNewsPage searchForANews(String searchNewsText) 
 	{
 		searchNewsField.sendKeys(searchNewsText);
+		return this;
 	}
 
-	public void clickOnSearchSubmitButton() 
+	public ManageNewsPage clickOnSearchSubmitButton() 
 	{
 		searchNewsSubmitButton.click();
+		return this;
 	}
 
-	public void resetAction() 
+	public ManageNewsPage resetAction() 
 	{
 		resetButton.click();
+		return this;
 	}
 	
 	public boolean isNewManageNewsPageDisplayed() 

@@ -14,6 +14,8 @@ import utilities.ExcelUtility;
 
 public class ManageNewsTest extends TestNGBase 
 {
+	HomePage home;
+
 	@Test(priority = 1, description = "Validate adding a new News")
 	public void VerifyWhetherUserIsAbleToAddANewNews() throws IOException 
 	{
@@ -21,9 +23,8 @@ public class ManageNewsTest extends TestNGBase
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
 		
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password);
+		home=login.clickLoginButton();
 
 		HomePage clickManageNewsTile = new HomePage(driver);
 		clickManageNewsTile.clickOnManageNewsTile();
@@ -31,9 +32,7 @@ public class ManageNewsTest extends TestNGBase
 		String newNewsText = ExcelUtility.readStringData(0, 0, "ManageNewsPage");
 
 		ManageNewsPage manageNPage = new ManageNewsPage(driver);
-		manageNPage.clickOnNewButton();
-		manageNPage.enterNewNewsOnManageNewsField(newNewsText);
-		manageNPage.clickOnSaveButton();
+		manageNPage.clickOnNewButton().enterNewNewsOnManageNewsField(newNewsText).clickOnSaveButton();
 		
 		boolean newManageNewsSaveButton = manageNPage.isNewManageNewsPageDisplayed();
 		Assert.assertTrue(newManageNewsSaveButton, Constant.AddNewManageNewsError);
@@ -46,9 +45,8 @@ public class ManageNewsTest extends TestNGBase
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password);
+		home=login.clickLoginButton();
 
 		HomePage clickManageNewsTile = new HomePage(driver);
 		clickManageNewsTile.clickOnManageNewsTile();
@@ -56,9 +54,7 @@ public class ManageNewsTest extends TestNGBase
 		String searchNewsText = ExcelUtility.readStringData(0, 0, "ManageNewsPage");
 
 		ManageNewsPage manageNPage = new ManageNewsPage(driver);
-		manageNPage.clickOnSearchButton();
-		manageNPage.searchForANews(searchNewsText);
-		manageNPage.clickOnSearchSubmitButton();
+		manageNPage.clickOnSearchButton().searchForANews(searchNewsText).clickOnSearchSubmitButton();
 		
 		boolean searchManageNewsSubmitButton = manageNPage.isSearchManageNewsPagePageDisplayed();
 		Assert.assertTrue(searchManageNewsSubmitButton, Constant.SearchManageNewsError);
@@ -71,9 +67,8 @@ public class ManageNewsTest extends TestNGBase
 		String password = ExcelUtility.readStringData(0, 1, "LoginPage");
 
 		LoginPage login = new LoginPage(driver);
-		login.enterUsernameOnUsernameField(userName);
-		login.enterPasswordOnPasswordField(password);
-		login.clickLoginButton();
+		login.enterUsernameOnUsernameField(userName).enterPasswordOnPasswordField(password);
+		home=login.clickLoginButton();
 
 		HomePage clickManageNewsTile = new HomePage(driver);
 		clickManageNewsTile.clickOnManageNewsTile();

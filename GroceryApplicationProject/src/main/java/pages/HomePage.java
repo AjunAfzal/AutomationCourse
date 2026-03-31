@@ -21,25 +21,30 @@ public class HomePage
 	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/list-news' and @class='small-box-footer']") WebElement manageNewsTile;
 	@FindBy(xpath = "//b[text()='7rmart supermarket']") WebElement pageText;
 	
-	public void clickOnProfileDropdown() 
+	
+	public HomePage clickOnProfileDropdown() 
 	{
 		profileDropdown.click();
+		return this;
 	}
 
-	public void clickOnLogoutOption() 
+	public LoginPage clickOnLogoutOption() 
 	{
 		logoutOption.click();
+		return new LoginPage(driver);
 	}
 
 	// Clicking on MoreInfo of Admin User Tile
-	public void clickOnAdminUserTile() 
+	public AdminUsersPage clickOnAdminUserTile() 
 	{
 		adminUserTile.click();
+		return new AdminUsersPage(driver);
 	}
 	
 	// Clicking on MoreInfo of Manage News Tile
-	public void clickOnManageNewsTile() 
+	public ManageNewsPage clickOnManageNewsTile() 
 	{
 		manageNewsTile.click();
+		return new ManageNewsPage(driver);
 	}
 }
