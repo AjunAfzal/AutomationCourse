@@ -5,10 +5,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import utilities.WaitUtility;
+
 public class LoginPage 
 {
 	public WebDriver driver;
-
+	WaitUtility wait = new WaitUtility();
+	
 	public LoginPage(WebDriver driver) 
 	{
 		this.driver = driver;
@@ -37,6 +40,7 @@ public class LoginPage
 	// Navigating to home page after login. So replaced void with HomePage and added return statement to home page
 	public HomePage clickLoginButton() 
 	{
+		wait.waitUntilElementToBeClickable(driver, loginButton);
 		loginButton.click();
 		return new HomePage(driver);
 	}
