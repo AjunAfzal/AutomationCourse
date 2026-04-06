@@ -94,8 +94,9 @@ public class AdminUsersPage
 
 	public AdminUsersPage selectFromSearchUserTypeDropDown() 
 	{
-		Select select = new Select(searchUserTypeDropDown);
-		select.selectByIndex(2);
+		page.selectDropdownWithIndex(searchUserTypeDropDown, 2);
+		// Select select = new Select(searchUserTypeDropDown);
+		// select.selectByIndex(2);
 		return this;
 	}
 	
