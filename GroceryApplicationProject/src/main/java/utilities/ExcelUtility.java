@@ -34,7 +34,6 @@ public class ExcelUtility
  		XSSFRow r = sh.getRow(row); 
  		XSSFCell c = r.getCell(col); 
  		int val =   (int) c.getNumericCellValue();  //convert double to int using typecasting 
- 		return String.valueOf(val);   //convert int to string using valueOf() method 
- 		//return val; 
+ 		return String.valueOf(val);   //convert int to string using valueOf() method & return val; 
  	}
 }

@@ -7,6 +7,12 @@ public class Constant
 	// URL of Website being automated
 	public static final String ConfigFile = System.getProperty("user.dir") + "\\src\\main\\resources\\config.properties";
 	
+	public static final String ManageNewsText = "News";
+	
+	public static final String AdminUsersTitle = "Admin Users";
+	
+	public static final String LoginPageExpectedText = "7rmart supermarket";
+	
 	// Assertion Error Messages
 	// Login Page
 	public static final String ValidLoginCredsError = "User was unable to login with Valid Creds";

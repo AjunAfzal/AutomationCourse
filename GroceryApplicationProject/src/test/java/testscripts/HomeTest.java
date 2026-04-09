@@ -31,7 +31,7 @@ public class HomeTest extends TestNGBase
 		login = logout.clickOnLogoutOption();
 		
 		String actualText = login.getPageText();
-		String expectedText = "7rmart supermarket";
+		String expectedText = Constant.LoginPageExpectedText;
 		Assert.assertEquals(actualText, expectedText, Constant.LogoutError);
 	}
 }

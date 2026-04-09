@@ -5,7 +5,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReportUtility 
 {
-	public static final ExtentReports extentReports = new ExtentReports();// static instance of extentreports that can be shared across the application 
+	public static final ExtentReports extentReports = new ExtentReports();// Static instance of extentreports that can be shared across the application 
 
 	public synchronized static ExtentReports createExtentReports() 
 	{ 
@@ -14,7 +14,7 @@ public class ExtentReportUtility
 		extentReports.attachReporter(reporter); 
 
 		extentReports.setSystemInfo("Organization", "Obsqura"); 
-		extentReports.setSystemInfo("Name", " Ajun"); // provides context of the report 
+		extentReports.setSystemInfo("Name", " Ajun"); // Provides context of the report 
 		return extentReports; 
 	}
 }

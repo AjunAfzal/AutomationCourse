@@ -7,6 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import constants.Constant;
+
 public class WaitUtility 
 {
 	public static int ExplicitWait = 5;
@@ -31,12 +33,12 @@ public class WaitUtility
 	public void waitUntilTextIsLocated(WebDriver driver, WebElement element) 
 	{
 		WebDriverWait text = new WebDriverWait(driver, Duration.ofSeconds(ExplicitWait));
-		text.until(ExpectedConditions.textToBePresentInElementValue(element, "News"));
+		text.until(ExpectedConditions.textToBePresentInElementValue(element, Constant.ManageNewsText));
 	}
 
 	public void waitUntilTitleIsLocated(WebDriver driver, WebElement element) 
 	{
 		WebDriverWait title = new WebDriverWait(driver, Duration.ofSeconds(ExplicitWait));
-		title.until(ExpectedConditions.titleIs("Admin Users"));
+		title.until(ExpectedConditions.titleIs(Constant.AdminUsersTitle));
 	}
 }
